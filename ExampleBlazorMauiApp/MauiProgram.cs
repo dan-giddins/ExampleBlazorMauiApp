@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using ExampleBlazorMauiApp.Data;
+using ExampleModernBlazorApp.Services;
 
 namespace ExampleBlazorMauiApp;
 
@@ -22,7 +22,7 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-		builder.Services.AddSingleton<WeatherForecastService>();
+		builder.Services.AddSingleton<ExampleService>();
 
 		return builder.Build();
 	}

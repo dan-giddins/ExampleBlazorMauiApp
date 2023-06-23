@@ -1,0 +1,111 @@
+:root {
+	/*custom light theme rgb values*/
+	--light-1: 255, 255, 255;
+	--light-2: 240, 240, 240;
+	/*bs overrides*/
+	--bs-light-rgb: var(--light-2);
+}
+
+#blazor-error-ui {
+	background: lightyellow;
+	bottom: 0;
+	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+	display: none;
+	left: 0;
+	padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+
+	#blazor-error-ui .dismiss {
+		cursor: pointer;
+		position: absolute;
+		right: 0.75rem;
+		top: 0.5rem;
+	}
+
+#logo-img {
+	height: 5em;
+	width: 5em;
+}
+
+#logo-div {
+	height: 5em;
+	width: 5em;
+	overflow: hidden;
+	border-bottom-right-radius: var(--bs-border-radius);
+}
+
+#side-menu {
+	margin-left: -0.5rem !important;
+}
+
+/*.nav-link {
+	border: 1px solid transparent !important;
+	border-radius: var(--bs-nav-pills-border-radius);
+	transition: border-color .15s, color .15s, background-color .15s;
+	color: var(--bs-nav-link-color);
+}
+
+	.nav-link:focus,
+	.nav-link:hover,
+	.nav-link:active {
+		border-color: var(--bs-nav-pills-link-active-bg) !important;
+	}
+
+	.nav-link:focus,
+	.nav-link:hover {
+		color: var(--bs-nav-link-color);
+	}*/
+
+h1:focus-visible {
+	outline: none;
+}
+
+.alert-div {
+	position: fixed;
+	top: 0.6em;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.fade-in {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 500ms;
+}
+
+.fade-out {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 500ms, visibility 1000ms;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		/*custom dark theme rgb values*/
+		--dark-1: 32, 32, 32;
+		--dark-2: 48, 48, 48;
+		--dark-3: 64, 64, 64;
+		--light-1: 240, 240, 240;
+		/*bs overrides*/
+		--bs-body-color: rgb(var(--light-1));
+		--bs-white-rgb: var(--dark-1);
+		--bs-light-rgb: var(--dark-2);
+		--bs-dark-rgb: var(--light-1);
+		--bs-border-color: rgb(var(--dark-3));
+		--bs-body-bg: rgb(var(--dark-1));
+	}
+
+	/*swap colours*/
+	.alert {
+		background-color: var(--bs-alert-color);
+		color: var(--bs-alert-bg);
+	}
+
+	/*invert*/
+	.btn-close {
+		filter: invert(1) grayscale(100%) brightness(200%);
+	}
+}
